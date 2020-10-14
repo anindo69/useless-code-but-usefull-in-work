@@ -1,12 +1,26 @@
-from numpy import random
+import random
+import sys
 
-print("Guess and enter two number between 1-5")
+x = ["1","2","3","4","5"]
 
-a = list(map(int,input("Enter one number : ").strip().split()))
+def check_number(randnum,usernum):
+    if randnum == usernum:
+        return "Right guess"
+    else:
+        return "Wrong"
 
-x = random.randint(5)
+def play():
+    usernum = None
+    while usernum not in x:
+        usernum = input("Enter number between 0-5 : ")
+        if usernum == "q":
+            sys.exit()
+    
+    randnum = random.choice(x)
 
-if x in a:
-    print("win")
-if x not in a:
-    print("lose")
+    print(f"Computer choose : {randnum}")
+    print("You" + check_number(randnum,usernum),end="\n\n")
+
+if __name__ =="__main__":
+    while True:
+        play()
