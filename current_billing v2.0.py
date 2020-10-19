@@ -15,9 +15,8 @@ unit = float(input("Enter the amount per unit : "))
 permonth = 0
 perday = 0
 res_list = [p[i]*T[i] for i in range(0,len(p))]
-for i in range(n):
-    permonth = (sum(res_list)/1000)*unit
-    perday = permonth/m
+permonth = (sum(res_list)/1000)*unit
+perday = permonth/m
 
 print("Cost per month : ",round(permonth,4))
 print("Cost per day : ",round(perday,4))
