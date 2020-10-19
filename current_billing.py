@@ -1,3 +1,4 @@
+#for finding out the current bill of everyday and month
 import numpy as np
 
 n = int(input("Enter the number of Electrical equipments : "))
